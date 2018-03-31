@@ -1,0 +1,12 @@
+- set_fact:
+    real_ansible_host: "{{ ansible_host }}"
+
+- name: reboot
+  shell: sleep 2 && reboot
+  async: 1
+  poll: 0
+  ignore_errors: true
+
+- name: "wait for PiStooge to reboot"
+  local_action: wait_for host={{ real_ansible_host }} port=22 state=started delay=10 timeout=120
+  become: false

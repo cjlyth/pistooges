@@ -1,0 +1,8 @@
+---
+- name: ping PiStooges
+  hosts: pistooges
+  remote_user: pi
+  gather_facts: False
+  tasks:
+    - name: test connection
+      ping:

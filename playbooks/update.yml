@@ -1,0 +1,20 @@
+---
+- name: Setup PiStooges
+  hosts: pistooges
+  vars:
+    ansible_ssh_pass: raspberry
+  remote_user: pi
+  become: yes
+
+  tasks:
+    - name: 'Update APT package cache'
+      action: apt update_cache=yes
+
+    - name: 'Upgrade APT to the lastest packages'
+      action: apt upgrade=safe
+      notify:
+        - reboot
+
+  handlers:
+    - include: ../handlers/reboot.yml
+      tags: system
