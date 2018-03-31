@@ -6,3 +6,7 @@
   tasks:
     - name: test connection
       ping:
+    - name: get model info
+      shell: "/bin/cat /proc/device-tree/model | sed 's/\\x0//g'"
+      register: model
+    - debug: msg={{ model.stdout }}

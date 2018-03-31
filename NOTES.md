@@ -38,6 +38,8 @@ Then this command should work
 ```bash
 ansible all -m ping
 ansible all -a "/bin/echo hello"
+
+ansible all -a "/bin/cat /proc/device-tree/model"
 ```
 
 ```bash
