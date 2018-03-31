@@ -11,6 +11,7 @@
         user: pi
         state: present
         key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+    - hostname: name={{ ansible_host }}
     - name: expand filesystem
       command: raspi-config --expand-rootfs
       become: yes

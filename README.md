@@ -1,4 +1,4 @@
-##Host info
+## Host info
 ```bash
 # b8:27:eb:8a:9e:70
 10.1.10.210 larry larry.cjlyth.net
@@ -10,7 +10,7 @@
 10.1.10.76 mo mo.cjlyth.net
 ```
 
-##Steps followed
+## Steps followed
 
 May need 
 ```bash

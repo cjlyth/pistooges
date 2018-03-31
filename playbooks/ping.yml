@@ -1,6 +1,8 @@
 ---
 - name: ping PiStooges
   hosts: pistooges
+  vars:
+      ansible_ssh_pass: raspberry
   remote_user: pi
   gather_facts: False
   tasks:
