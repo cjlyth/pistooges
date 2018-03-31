@@ -7,7 +7,11 @@
 10.1.10.192 curly curly.cjlyth.net
 
 # b8:27:eb:e1:f9:de
-10.1.10.76 mo mo.cjlyth.net
+10.1.10.76 moe moe.cjlyth.net
+
+# b8:27:eb:cb:ae:08
+10.1.10.67 shemp shemp.cjlyth.net
+
 ```
 
 ## Steps followed
@@ -23,7 +27,8 @@ Added the following to `/etc/ansible/hosts`
 [pistooges]
 larry.cjlyth.net
 curly.cjlyth.net
-mo.cjlyth.net
+moe.cjlyth.net
+shemp.cjlyth.net
 ```
 
 Added the following to ~/.ssh/config

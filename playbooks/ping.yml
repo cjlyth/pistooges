@@ -1,11 +1,15 @@
 ---
-- name: ping PiStooges
+- name: Ping PiStooges
   hosts: pistooges
-  vars:
-      ansible_ssh_pass: raspberry
   remote_user: pi
   gather_facts: False
+  vars:
+      ansible_ssh_pass: raspberry
   tasks:
+    - name: clean known hosts
+      local_action: shell "ssh-keygen -R {{ inventory_hostname }} >/dev/null"
+      ignore_errors: yes
+      no_log: yes
     - name: test connection
       ping:
     - name: get model info
